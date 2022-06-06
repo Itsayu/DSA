@@ -11,11 +11,9 @@ public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ListNode *ayu=headA;
         
-        while(ayu!=NULL)
-        {
+        while(ayu!=NULL){
             ListNode *akt=headB;
-            while(akt!=NULL)
-            {
+            while(akt!=NULL){
                 if(ayu==akt)
                     return ayu;
                 else
