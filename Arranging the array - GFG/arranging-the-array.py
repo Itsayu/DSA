@@ -2,17 +2,17 @@
 
 def Rearrange( a, n):
     # Your code goes here
-    negValue=[]
-    posValue=[]
+    negNo=[]
+    posNo=[]
     for i in range(n):
         if a[i]<0:
-            negValue.append(a[i])
+            negNo.append(a[i])
         else:
-            posValue.append(a[i])
+            posNo.append(a[i])
     
-    negValue.extend(posValue)
+    negNo.extend(posNo)
     for i in range(n):
-        a[i]=negValue[i]
+        a[i]=negNo[i]
     
 #{ 
 #  Driver Code Starts
