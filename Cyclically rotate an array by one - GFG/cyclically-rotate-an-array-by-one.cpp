@@ -29,9 +29,9 @@ int main()
 //User function Template for C++
 
 void rotate(int arr[], int n){
-    int k=arr[n-1];
+    int ayu=arr[n-1];
     for(int i=n-1; i>=1; i--){
         arr[i]=arr[i-1];
     }
-    arr[0]=k;
+    arr[0]=ayu;
 }
