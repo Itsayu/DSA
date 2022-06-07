@@ -34,4 +34,8 @@ void rotate(int arr[], int n){
         arr[i]=arr[i-1];
     }
     arr[0]=ayu;
+    // -----------------OR-----------------
+    // for(int i=n-1; i>0; i--){
+    //   swap(arr[i], arr[i-1]);
+
 }
