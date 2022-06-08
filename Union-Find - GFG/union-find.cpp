@@ -24,7 +24,7 @@ class Solution
         //code here
         a=find(a,par),b=find(b,par);
         if(rank1[a]>=rank1[b])
-            par[b]=a,rank1[a]++;
+            par[b]=a,rank1[a]--;
         else
             par[a]=b,rank1[b]--;
     }
