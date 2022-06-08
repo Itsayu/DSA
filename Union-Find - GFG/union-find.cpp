@@ -26,7 +26,7 @@ class Solution
         if(rank1[a]>=rank1[b])
             par[b]=a,rank1[a]++;
         else
-            par[a]=b,rank1[b]++;
+            par[a]=b,rank1[b]--;
     }
     
     //Function to check whether 2 nodes are connected or not.
