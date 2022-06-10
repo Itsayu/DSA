@@ -5,12 +5,11 @@ using namespace std;
  // } Driver Code Ends
 class Solution{
     public:
-        double binary_Search(double low,double high,double a[],int n){
-        // Your code goes here  
+        double binarySearch(double low,double high,double a[],int n){
         while(low<high){
-            double mid = low + (high-low)/2, netForce = 0.0,minForce=(1e-6);
+            double mid=low+(high-low)/2, netForce=0.0,minForce=(1e-6);
             for(int i=0;i<n;i++){
-                netForce+= 1/(mid-a[i]);
+                netForce+=1/(mid-a[i]);
                 }
             if(netForce>minForce){
                 low=mid;
@@ -25,7 +24,7 @@ class Solution{
     }
     void nullPoints(int n, double a[], double getAnswer[]){
           for(int i=0;i<n-1;i++)
-            getAnswer[i] = binary_Search(a[i],a[i+1],a,n);
+            getAnswer[i]=binarySearch(a[i],a[i+1],a,n);
     }
 };
 
