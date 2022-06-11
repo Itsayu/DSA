@@ -16,7 +16,7 @@ public:
             while(r>l and x>0)
                 x-=nums[r--];
             if(x==0)
-                ans=min(ans,1+l+(int)nums.size() -r-1);  
+                ans=min(ans,1+l+(int)nums.size()-r-1);  
         }        
         return ans==INT_MAX?-1:ans;
     }
