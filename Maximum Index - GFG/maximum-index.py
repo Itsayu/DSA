@@ -10,7 +10,7 @@ class Solution:
             for j in range(N-1,i,-1):
                 if A[i]<=A[j]:
                     ayu=max(ayu,j-i)
-                    brea
+                    break
         return ayu
 
 #{ 
