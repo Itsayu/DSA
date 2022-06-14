@@ -8,18 +8,18 @@ class Solution
 {
     public:
         int solve(int n){
-            if(n <= 1)
+            if(n<=1)
                 return n;
-            return n + solve(n/5);
+            return n+solve(n/5);
             }
         int findNum(int n){
-            int l = 1, r = n;
-            while(l < r){
-                int mid = (l+r)/2, x = solve(mid);
-                if(x >= n)
-                    r = mid;
+            int l=1,r=n;
+            while(l<r){
+                int mid=(l+r)/2,x=solve(mid);
+                if(x>=n)
+                    r=mid;
                 else
-                    l = mid+1;
+                    l=mid+1;
             }
             return 5*l;
         }
