@@ -2,8 +2,8 @@
 
 def chocolates (arr, n) : 
     #Complete the function
-    arr.sort()
-    return arr[0]
+    # arr.sort()
+    return min(arr)
 
 
 #{ 
