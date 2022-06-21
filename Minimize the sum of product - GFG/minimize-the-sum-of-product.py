@@ -5,7 +5,7 @@ class Solution:
         # Your code goes here
         ayu=0
         a.sort()
-        b.sort()
+        b.sort(reverse=True)
         for i in range(0,n):
             ayu+=a[i]*b[i]
         return ayu
