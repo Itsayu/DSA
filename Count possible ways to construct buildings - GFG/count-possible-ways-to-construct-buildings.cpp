@@ -4,11 +4,12 @@ using namespace std;
 
  // } Driver Code Ends
 class Solution{
-    int M = 1e9+7;
 	public:
+	
 	int TotalWays(int N)
 	{
 	    // Code here
+	    int M = 1e9+7;
 	    if(!N)
 	        return 1;
 	    if(N==1)
