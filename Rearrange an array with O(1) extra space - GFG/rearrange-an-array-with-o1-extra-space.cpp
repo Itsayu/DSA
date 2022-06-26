@@ -15,9 +15,9 @@ class Solution{
     void arrange(long long arr[], int n) {
         // Your code here
          if(n>0){
-            int temp=arr[arr[n-1]];
+            int ayu=arr[arr[n-1]];
             arrange(arr,n-1);
-            arr[n-1]=temp;
+            arr[n-1]=ayu;
         }
     }
 };
