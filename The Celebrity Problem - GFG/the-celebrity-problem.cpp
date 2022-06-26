@@ -24,7 +24,6 @@ class Solution
                 }
             }
         }
-       
         for(int i = 0;i<n;i++){
             if(IN[i]==n-1 && OUT[i]==0){
                 return i;
