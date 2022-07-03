@@ -25,9 +25,9 @@ public:
                             ans.push_back(w+" "+t);
                         }
                     }
+                }
             }
-        }
-        return dp[s]=ans;
+            return dp[s]=ans;
     }
 };
 
