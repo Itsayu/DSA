@@ -11,24 +11,24 @@ using namespace std;
 class Solution
 {
 public:
-    vector<vector<int>> outans;
-    void dfs(int i,int j, vector<vector<int>>&grid,vector<int>path){
-        if(i>=grid.size()||j>=grid[0].size()){
-            return;
-        }
-        if(j==grid[0].size()-1&&i==grid.size()-1){
+        vector<vector<int>> outans;
+        void dfs(int i,int j, vector<vector<int>>&grid,vector<int>path){
+            if(i>=grid.size()||j>=grid[0].size()){
+                return;
+            }
+            if(j==grid[0].size()-1&&i==grid.size()-1){
+                path.push_back(grid[i][j]);
+                outans.push_back(path);
+                return;
+            }
             path.push_back(grid[i][j]);
-            outans.push_back(path);
-            return;
+            dfs(i+1,j,grid,path);
+            dfs(i,j+1,grid,path);
         }
-        path.push_back(grid[i][j]);
-        dfs(i+1,j,grid,path);
-        dfs(i,j+1,grid,path);
-    }
-    vector<vector<int>> findAllPossiblePaths(int n, int m, vector<vector<int>> &grid){
-        vector<int>path;
-        dfs(0,0,grid,path);
-        return outans;
+        vector<vector<int>> findAllPossiblePaths(int n, int m, vector<vector<int>> &grid){
+            vector<int>path;
+            dfs(0,0,grid,path);
+            return outans;
     }
 };
 
