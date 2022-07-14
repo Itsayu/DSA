@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int idx=0;
+    int ayu=0;
     int search(vector<int> &inorder, int curr, int start, int end){
         while(start <= end){
             if(inorder[start]==curr)
@@ -23,7 +23,7 @@ public:
     TreeNode* constructTree(vector<int> &preorder, vector<int> &inorder, int start, int end){
         if(start>end)
             return NULL;
-        int curr=preorder[idx++];
+        int curr=preorder[ayu++];
         TreeNode *node=new TreeNode(curr);
         int pos=search(inorder, curr, start, end);
         node->left=constructTree(preorder, inorder, start, pos-1);
