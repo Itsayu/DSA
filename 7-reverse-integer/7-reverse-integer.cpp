@@ -1,15 +1,15 @@
 class Solution {
 public:
     int reverse(int x) {
-        int a=0;
+        int ayu=0;
         while(x!=0){
             int digit= x%10;
-            if((a>INT_MAX/10)||(a<INT_MIN/10)){
+            if((ayu>INT_MAX/10)||(ayu<INT_MIN/10)){
                 return 0;
             }
-            a=(a *10)+digit;
+            ayu=(ayu *10)+digit;
             x/=10;
         }
-        return a;
+        return ayu;
     }
 };
