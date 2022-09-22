@@ -1,17 +1,18 @@
 class Solution {
 public:
     string reverseWords(string s) {
-        string sol="";
-    stringstream ss(s);
-    
-    string str = "";
-    while(getline(ss,str,' '))
+        string ayu="";
+        //stringstream is Used for breaking the words
+    stringstream nr(s);
+        
+    string akt="";
+    while(getline(nr,akt,' '))
     {
-        reverse(str.begin(),str.end());
-        sol+=str;
-        sol+=" ";
+        reverse(akt.begin(),akt.end());
+        ayu+=akt;
+        ayu+=" ";
     }
-    sol.pop_back();
-    return sol;
+    ayu.pop_back();
+    return ayu;
     }
 };
