@@ -28,6 +28,7 @@ struct Node
 }
 
 */
+#include<stack>
 class Solution
 {
     
@@ -42,11 +43,11 @@ class Solution
         Node* curr = head;
         
         while(curr != NULL){
-            Node * nbr = curr->next;
+            Node * currnext = curr->next;
             
             curr->next =  pre;
             pre = curr;
-            curr = nbr;
+            curr = currnext;
         }
         return pre;
         
