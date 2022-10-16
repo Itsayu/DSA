@@ -41,6 +41,7 @@ class Solution
         
         Node* pre= NULL;
         Node* curr = head;
+        Node* currnext = NULL;
         
         while(curr != NULL){
             Node * currnext = curr->next;
