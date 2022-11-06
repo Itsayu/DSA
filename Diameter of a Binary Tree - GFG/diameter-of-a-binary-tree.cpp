@@ -100,8 +100,8 @@ class Solution {
       }
       int left = height(root -> left);
       int right = height(root -> right);
-      int nr = max(left, right) + 1;
-      return nr;
+      int akt = max(left, right) + 1;
+      return akt;
   }
   
   public:
