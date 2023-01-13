@@ -1,15 +1,15 @@
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
-        map<int,int>mp;
+        map<int,int>m;
         set<int>st;
         for(int i=0;i<arr.size();i++){
-            mp[arr[i]]++;
+            m[arr[i]]++;
         }
-        for( auto i : mp){
+        for( auto i : m){
             st.insert(i.second);
         }
-       if(mp.size()==st.size()){
+       if(m.size()==st.size()){
            return true;
        }
         return false;
