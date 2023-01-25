@@ -1,0 +1,32 @@
+class Solution
+{
+    public:
+    //Function to perform case-specific sorting of strings.
+    string caseSort(string str, int n)
+    {
+        // your code here
+        string nr="";
+        string akt="";
+        for(int i=0; i<n; i++){
+            if(str[i] >= 'A' && str[i] <= 'Z') nr += str[i];
+            else akt += str[i];
+        }
+        
+        sort(akt.begin(),akt.end());
+               sort(nr.begin(),nr.end());
+               
+               int akt1=0;
+               int nr1=0;
+               for(int i=0; i<n; i++){
+                   if(str[i] >= 'A' && str[i] <= 'Z'){
+                       str[i]=nr[nr1];
+                       nr1++;
+                   } 
+                   else{
+                      str[i] = akt[akt1];
+                      akt1++;
+                   }
+               }
+               return str;
+    }
+};
