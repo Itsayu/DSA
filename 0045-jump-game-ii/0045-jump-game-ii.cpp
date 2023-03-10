@@ -7,7 +7,7 @@ public:
             int newRight = right + 1;
             for (int i = left; i <= right; ++i)
                 newRight = max(newRight, i + nums[i]);
-            
+           
             left = right + 1;
             right = newRight;
             jumps++;
