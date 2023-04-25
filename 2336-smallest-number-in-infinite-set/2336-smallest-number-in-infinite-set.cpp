@@ -1,5 +1,5 @@
 class SmallestInfiniteSet {
-int curr = 1;
+    int curr = 1;
     bool removed[1001] = {};
 public:
     SmallestInfiniteSet() {}
