@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int ans = INT_MAX;
+    int nr = INT_MAX;
     int num = -1;
 
 int getMinimumDifference(TreeNode* root) {
@@ -20,13 +20,13 @@ int getMinimumDifference(TreeNode* root) {
         getMinimumDifference(root->left);
 
     if (num >= 0)
-        ans = min(ans, root->val - num);
+        nr = min(nr, root->val - num);
 
     num = root->val;
 
     if (root->right != NULL)
         getMinimumDifference(root->right);
 
-      return ans;
+      return nr;
     }
 };
