@@ -11,17 +11,23 @@
  */
 class Solution {
 public:
-    int ans=0;
-    int func(TreeNode* root){
-        if(root==NULL) return 0;
-        if(root->left==NULL && root->right==NULL) return root->val-1;
-        int p=func(root->left);
-        int q=func(root->right);
-        ans+=(abs(p)+abs(q));
-        return root->val-1+p+q;
-    }
-    int distributeCoins(TreeNode* root) {
-        func(root);
-        return ans;
+    int distributeCoins(TreeNode* root)
+    {
+        if(!root)
+            return 0;
+        int count_moves = 0;
+        if(root->left)
+        {
+            count_moves += distributeCoins(root->left) + abs(root->left->val - 1);
+            root->val += root->left->val - 1;
+            root->left->val = 1;
+        }
+        if(root->right)
+        {
+            count_moves += distributeCoins(root->right) + abs(root->right->val - 1);
+            root->val += root->right->val -1;
+            root->right->val = 1;
+        }
+        return count_moves;
     }
 };
